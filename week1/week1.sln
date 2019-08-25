@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "week1", "week1\week1.vcxproj", "{77E3CB91-859A-42D0-B246-1FDBDE9C6B23}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.recursion", "week1\week1.vcxproj", "{77E3CB91-859A-42D0-B246-1FDBDE9C6B23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4384505A-BD08-44D9-ABC7-40693D4CEBF0}"
+	ProjectSection(SolutionItems) = preProject
+		week1\note.md = week1\note.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

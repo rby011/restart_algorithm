@@ -56,6 +56,6 @@
 		// 현재 값이 서브루틴들로서의 결과보다 크다면 현재값이 최대값이고
 		if (data[begin] > find_max ( data , begin + 1 , end)) return data[begin];
 		// 그렇지 않다면 서브루틴들의 결과가 최대값이다
-		return find_max3 ( data , begin + 1 , end );
+		return find_max ( data , begin + 1 , end );
 	}
    ~~~

@@ -7,7 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1.recursion", "week1\week1.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4384505A-BD08-44D9-ABC7-40693D4CEBF0}"
 	ProjectSection(SolutionItems) = preProject
-		week1\note.md = week1\note.md
+		node_2.md = node_2.md
+		week1\note_1.md = week1\note_1.md
 	EndProjectSection
 EndProject
 Global

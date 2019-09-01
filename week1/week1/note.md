@@ -1,8 +1,8 @@
 ## Recursion
 
-- **재귀적으로 문제를 바라보는 방식**
+#### 재귀적으로 문제를 바라보는 방식
 
-   **문자열 뒤집어서 출력하는 사례**
+   **1. 문자열 뒤집어서 출력하는 사례**
 
   ![File](file.png)
 
@@ -41,14 +41,14 @@
   }
   ~~~
 
-- **재귀 구조에서의 반환 루틴**
+  **2. 재귀 구조에서의 반환 루틴**
 
   **배열의 합을 구하여 반환하는 사례**
 
-    - 잘못된 사고 방식 (매번 틀림)
-	- `반환되는 sum 지역 변수가 반환 루틴에서 이어지지 않는 문제임`    
+   - 잘못된 사고 방식 (매번 틀림)
+   - `반환되는 sum 지역 변수가 반환 루틴에서 이어지지 않는 문제임`    
 
-	~~~c
+   ~~~c
 	int sum_array ( int arr[] , int idx, int arr_len, int sum) {
 		if (idx == arr_len)	return sum;
 
@@ -58,15 +58,15 @@
 
 		return sum;
 	}
-	~~~
+   ~~~
     
-    - 위와 같은 코드는 아래의 흐름으로 동작함
+   - 위와 같은 코드는 아래의 흐름으로 동작함
       `즉, 최초 생성되는 지역 변수의 값으로 외부로 전달되어 함수 호출로 만들어지는 합의 값이 제대로 전달되지 않음`
       ![Error 1](error_1.png)
 
-	- 아래와 같은 생각을 해야 함
+   - 아래와 같은 생각을 해야 함
     
-	~~~c
+   ~~~c
 	int sum_array ( int arr[] , int idx, int arr_len, int sum) {
 		if (idx == arr_len)	return sum;
 
@@ -74,7 +74,17 @@
 
 		return sum_array ( arr , idx + 1 , arr_len , sum );
 	}
-	~~~
+   ~~~
 
-	- 위 코드는 아래와 같이 동작함
+   - 위 코드는 아래와 같이 동작함
     ![Correct 1](correct_1.png)
+
+   - 또한 위 코드에서 불필요한 메모리 할당을 야기하는 sum 변수는 필요 없음
+   
+   ~~~c
+	int sum_array_opt ( int arr[] , int idx, int arr_len) {
+		if (idx == arr_len) return 0;
+
+		return arr[idx] + sum_array_opt ( arr , idx + 1, arr_len );
+	}
+   ~~~ 
